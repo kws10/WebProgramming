@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>My homepage</title>
+
+      <style>
+        body{
+          background-color:beige;
+        }
+        h1 {
+          background: url(back1.jpg);
+          color: white;
+        }
+        h2{
+          text-align:center;
+        }
+
+        li{
+          color:blue;
+        }
+
+        li:hover{
+          color:red;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        #textstyle1{
+          text-shadow: 5px 5px 5px red;
+          font-size: 20px;
+        }
+
+        table {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #ddd;
+          padding: 8px;
+        }
+
+        tr:nth-child(even){background-color: #f2f2f2;}
+
+        tr:hover {background-color: #ddd;}
+
+        th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: left;
+          background-color: #04AA6D;
+          color: white;
+        }
+
+      </style>
+
+   </head>
+
+   <body>
+       <h1 class="target1"> Lee Sang ho`s Profile </h1>
+       <hr>
+
+       <form>
+         <div style="border: 3px solid red;">
+         <p id="textstyle1"><b>Login</b></p>
+         <br>
+         <label>ID :</label><br>
+         <input type="text" autofocus required><br>
+         <label>PW : </label><br>
+         <input type="password" placeholder="at least 10 words" readonly><br>
+         </div>
+         <hr>
+       </form>
+
+       <table>
+         <caption id="textstyle1"><b> Profile </b></caption>
+         <tr>
+           <th>Name</th>
+           <th>Age</th>
+           <th>place of origin</th>
+         </tr>
+         <tr>
+           <td>Lee sang ho</td>
+           <td>24</td>
+           <td>Daejeon</td>
+         </tr>
+
+         <tr>
+           <th>github URL</th>
+           <th>hobby</th>
+           <th>crew</th>
+         </tr>
+         <tr>
+           <td> <a href="https://github.com/kws10">github.com/kws10 </a> </td>
+           <td>play games</td>
+           <td>CUVIC</td>
+         </tr>
+
+         <tr>
+           <th>Tall</th>
+           <th>Weight</th>
+           <th>grade</th>
+         </tr>
+         <tr>
+           <td>175cm</td>
+           <td>70kg</td>
+           <td>3rd</td>
+         </tr>
+
+        </table>
+
+        <p id="textstyle1"><b>My dreams</b></p>
+        <br>
+        <img src="android.png">
+        <p>Android software developer</p>
+
+
+
+
+        <p id="textstyle1"> <b>Have learned</b> </p>
+        <ul>
+          <li> C language </li>
+          <li> C++ language </li>
+          <li> python language </li>
+          <li> java language </li>
+        </ul>
+
+
+        <p id="textstyle1"> <b>My favorite singer</b> </p>
+        <embed src="https://www.youtube.com/embed/3hdEosRCiK0" width="300" height="300">
+
+
+       
+   </body>
+
+</html>
