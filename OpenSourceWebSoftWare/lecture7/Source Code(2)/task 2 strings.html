@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>JavaScript String</h2>
+  <p>Original String:</p>  
+  <p id="original"></p>
+  
+  <p>Replaced String:</p>  
+  <p id="replaced"></p>
+  
+  <script>
+	var str = 'best';	
+	document.getElementById("original").innerHTML = str;	
+	
+	var ch = str[0];
+	var replaced = str.replace(ch, 't')	
+	document.getElementById("replaced").innerHTML = replaced;			
+  </script>
+</body>
+</html> 

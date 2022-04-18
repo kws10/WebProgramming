@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<h1> JavaScript Controls </h1>
+
+<script>
+
+function fun(x){
+
+  if(x%100 < 14 && x%100 >10){
+    return x + "th";
+  }
+
+  switch (x%10) {
+    case 1:
+      return x + "st" ;
+      break;
+    case 2:
+      return x + "nd" ;
+      break;
+    case 3:
+      return x + "rd";
+      break;
+    default:
+      return x + "th";
+      break;
+
+  }
+  }
+
+  document.write(fun(1)+"<br>");
+  document.write(fun(8)+"<br>");
+  document.write(fun(301)+"<br>");
+  document.write(fun(41)+"<br>");
+  document.write(fun(711)+"<br>");
+
+
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script>
+
+  var i = 0;
+  var k;
+  var list = new Array();
+
+  function fun1(){
+      list[i] = document.getElementById("number").value;
+      i++;
+  }
+
+  function fun2(){
+      for(k=0; k< list.length ;k++){
+          document.write(list[k]+"<br>");
+      }
+
+  }
+
+
+</script>
+
+</head>
+
+<body>
+    Input : <input id="number" />
+    <input type="button" value=Stack onclick="fun1();" /><br /><br />
+    <input type="button" value=Show onclick="fun2();" />
+</body>
+
+</html>
