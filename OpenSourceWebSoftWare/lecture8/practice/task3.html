@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <script>
+     function cal(){
+       var first = document.getElementById("first").value;
+       var second = document.getElementById("second").value;
+       var sum = parseInt(first) + parseInt(second);
+
+       document.getElementById("sum").value=sum;
+     }
+
+  </script>
+</head>
+
+<body>
+
+  <form action="" method="POST">
+    first_integer: <input type="text" id="first"/> <br />
+    second_integer: <input type="text" id="second"/> <br />
+    Total: <input type="text" id="sum" /><br />
+
+    <input type="button" value=Calculator onclick="cal();" />
+
+   </form>
+</body>
+
+</html>

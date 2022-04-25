@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<script>
+    function change(){
+      for(var i=2;i<5;i++)
+       document.getElementsByClassName("table_image")[i].src = "test5.jpg"
+    }
+
+
+
+</script>
+
+<head>
+
+  <table border="1">
+     <tr>
+        <script>
+          for(var i=1; i<5; i++){
+             document.write('<td><img class="table_image" src="test'+ i +'.jpg"/></td>')
+          }
+
+        </script>
+     </tr>
+
+     <input type="button" value="Change" onclick="change();" />
+
+  </table>
+
+</html>
