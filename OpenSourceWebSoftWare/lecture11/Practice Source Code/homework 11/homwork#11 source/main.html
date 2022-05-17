@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <style>
+    .cycle-slideshow{
+      position: relative;
+      min-width: 600px;
+      background-position: center;
+      text-align: center;
+      left: 30%;
+    }
+    hr{
+      border-color:red;
+      border-style:dotted;
+    }
+    #menu_hr{
+      border:1px solid white;
+    }
+    li{
+      float: left;
+      margin-right:100px;
+      font-weight:bold;
+    }
+    li:hover{
+       color:red;
+    }
+
+    .list{
+      position:absolute;
+      background-position: center;
+      left:22%;
+      right:25%;
+      min-width:1000px;
+      text-align: center;
+    }
+
+    .body{
+      float:left;
+      position:relative;
+      background-position: center;
+      margin:5px;
+      left:22%;
+      right:25%;
+      min-width:1000px;
+    }
+    .body div{
+      margin-right: 5px;
+    }
+    .body2{
+      position: relative;
+      float:left;
+      background-position: center;
+      margin:5px;
+      left:22%;
+      right:25%;
+      min-width:1000px;
+    }
+    .body2 div{
+      margin-right: 5px;
+    }
+
+    .body3{
+      position: relative;
+      float:left;
+      background-position: center;
+      margin:5px;
+      left:22%;
+      right:25%;
+      min-width:1000px;
+    }
+    .body3 div{
+      margin-right: 5px;
+    }
+
+    .body4{
+      position: relative;
+      float:left;
+      background-position: center;
+      margin:5px;
+      left:22%;
+      right:25%;
+      min-width:1000px;
+    }
+    .body4 button{
+      width: 905px;
+      height: 50px;
+      background-color: skyblue;
+    }
+    .menu{
+      width: 100px;
+      height: 100px;
+      left:90%;
+      top:80%;
+      color:red;
+      background-color:skyblue;
+      position: fixed;
+      font-size: 15px;
+      text-align: center;
+    }
+    .apple{
+      float: left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .apple:hover{
+      border: 1px solid red;
+    }
+    .apple img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .banana{
+      float: left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .banana:hover{
+      border: 1px solid red;
+    }
+    .banana img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .orange{
+      float: left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .orange:hover{
+      border: 1px solid red;
+    }
+    .orange img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .watermelon{
+      float: left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .watermelon:hover{
+      border: 1px solid red;
+    }
+    .watermelon img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .kiwi{
+      float:left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .kiwi:hover{
+      border: 1px solid red;
+    }
+    .kiwi img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .strawberry{
+      float: left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .strawberry:hover{
+      border: 1px solid red;
+    }
+    .strawberry img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .cherry{
+      float:left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .cherry:hover{
+      border: 1px solid red;
+    }
+    .cherry img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .tomato{
+      float:left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .tomato:hover{
+      border: 1px solid red;
+    }
+    .tomato img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+
+    .lemon{
+      float:left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .lemon:hover{
+      border: 1px solid red;
+    }
+    .lemon img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .melon{
+      float:left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .melon:hover{
+      border: 1px solid red;
+    }
+    .melon img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .coconut{
+      float:left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .coconut:hover{
+      border: 1px solid red;
+    }
+    .coconut img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+    .pineapple{
+      float:left;
+      border: 1px solid black;
+      width: 22%;
+      height: 25%;
+      text-align: center;
+    }
+    .pineapple:hover{
+      border: 1px solid red;
+    }
+    .pineapple img{
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+    }
+
+
+
+
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="jquery.cycle2.min.js"></script>
+
+  <script>
+  var price = 0;
+  var apple_flg = 0;
+  var banana_flg = 0;
+  var orange_flg = 0;
+  var watermelon_flg = 0;
+  var kiwi_flg = 0;
+  var strawberry_flg = 0;
+  var cherry_flg = 0;
+  var tomato_flg = 0;
+  var lemon_flg = 0;
+  var melon_flg = 0;
+  var coconut_flg = 0;
+  var pineapple_flg = 0;
+
+  function buy(){
+     alert(price);
+  }
+  function toggle_apple(){
+      if(apple_flg==0){
+         document.getElementById('apple').src="check.jpg";
+         price = price + 5;
+         apple_flg=1;
+      }
+      else if(apple_flg==1){
+         document.getElementById('apple').src="apple.jpg";
+         price = price - 5;
+         apple_flg=0;
+      }
+  }
+  function toggle_banana(){
+      if(banana_flg==0){
+         document.getElementById('banana').src="check.jpg";
+         price = price + 10;
+         banana_flg=1;
+      }
+      else if(banana_flg==1){
+         document.getElementById('banana').src="banana.jpg";
+         price = price - 10;
+         banana_flg=0;
+      }
+  }
+  function toggle_orange(){
+      if(orange_flg==0){
+         document.getElementById('orange').src="check.jpg";
+         price = price + 5;
+         orange_flg=1;
+      }
+      else if(orange_flg==1){
+         document.getElementById('orange').src="orange.jpg";
+         price = price - 5;
+         banana_flg=0;
+      }
+  }
+  function toggle_watermelon(){
+      if(watermelon_flg==0){
+         document.getElementById('watermelon').src="check.jpg";
+         price = price + 10;
+         watermelon_flg=1;
+      }
+      else if(orange_flg==1){
+         document.getElementById('watermelon').src="watermelon.jpg";
+         price = price - 10;
+         watermelon_flg=0;
+      }
+  }
+  function toggle_kiwi(){
+      if(kiwi_flg==0){
+         document.getElementById('kiwi').src="check.jpg";
+         price = price + 5;
+         kiwi_flg=1;
+      }
+      else if(kiwi_flg==1){
+         document.getElementById('kiwi').src="kiwi.jpg";
+         price = price - 5;
+         kiwi_flg=0;
+      }
+  }
+  function toggle_strawberry(){
+      if(strawberry_flg==0){
+         document.getElementById('strawberry').src="check.jpg";
+         price = price + 15;
+         strawberry_flg=1;
+      }
+      else if(strawberry_flg==1){
+         document.getElementById('strawberry').src="strawberry.jpg";
+         price = price - 15;
+         strawberry_flg=0;
+      }
+  }
+  function toggle_cherry(){
+      if(cherry_flg==0){
+         document.getElementById('cherry').src="check.jpg";
+         price = price + 5;
+         cherry_flg=1;
+      }
+      else if(cherry_flg==1){
+         document.getElementById('cherry').src="cherry.jpg";
+         price = price - 5;
+         cherry_flg=0;
+      }
+  }
+  function toggle_tomato(){
+      if(tomato_flg==0){
+         document.getElementById('tomato').src="check.jpg";
+         price = price + 25;
+         tomato_flg=1;
+      }
+      else if(tomato_flg==1){
+         document.getElementById('tomato').src="tomato.jpg";
+         price = price - 25;
+         tomato_flg=0;
+      }
+  }
+  function toggle_lemon(){
+      if(lemon_flg==0){
+         document.getElementById('lemon').src="check.jpg";
+         price = price + 5;
+         lemon_flg=1;
+      }
+      else if(lemon_flg==1){
+         document.getElementById('lemon').src="lemon.jpg";
+         price = price - 5;
+         lemon_flg=0;
+      }
+  }
+  function toggle_melon(){
+      if(melon_flg==0){
+         document.getElementById('melon').src="check.jpg";
+         price = price + 15;
+         melon_flg=1;
+      }
+      else if(melon_flg==1){
+         document.getElementById('melon').src="melon.jpg";
+         price = price - 15;
+         melon_flg=0;
+      }
+  }
+  function toggle_coconut(){
+      if(coconut_flg==0){
+         document.getElementById('coconut').src="check.jpg";
+         price = price + 25;
+         coconut_flg=1;
+      }
+      else if(coconut_flg==1){
+         document.getElementById('coconut').src="coconut.jpg";
+         price = price - 25;
+         coconut_flg=0;
+      }
+  }
+  function toggle_pineapple(){
+      if(pineapple_flg==0){
+         document.getElementById('pineapple').src="check.jpg";
+         price = price + 20;
+         pineapple_flg=1;
+      }
+      else if(pineapple_flg==1){
+         document.getElementById('pineapple').src="pineapple.jpg";
+         price = price - 20;
+         pineapple_flg=0;
+      }
+  }
+
+
+
+
+
+  </script>
+
+</head>
+
+<body>
+  <div class="cycle-slideshow"
+       data-cycle-timeout="1000"
+       data-cylce-speed="2000">
+      <img src="kiwi.jpg">
+      <img src="coconut.jpg">
+      <img src="orange.jpg">
+      <img src="tomato.jpg">
+      <img src="apple.jpg">
+      <img src="banana.jpg">
+      <img src="melon.jpg">
+      <img src="pineapple.jpg">
+      <img src="watermelon.jpg">
+      <img src="cherry.jpg">
+      <img src="lemon.jpg">
+      <img src="strawberry.jpg">
+  </div>
+   <hr>
+   <div class="list">
+   <ul style="list-style: none;">
+     <li>BEST</li>
+     <li>FRUIT</li>
+     <li>VEGETABLE</li>
+     <li>DAIRY</li>
+     <li>CLOTH</li>
+     <li>ELECTRONIC</li>
+   </ul>
+   </div>
+   <br>
+   <br>
+   <hr>
+   <div class="body">
+     <h1>Best fruit</h1>
+     <div class="apple" onclick="toggle_apple()"><img id="apple" src="apple.jpg"/><p>apple</p><p>5$</p></div>
+     <div class="banana" onclick="toggle_banana()"> <img id="banana" src="banana.jpg"/><p>banana</p><p>10$</p></div>
+     <div class="orange" onclick="toggle_orange()"> <img id="orange" src="orange.jpg"/><p>orange </p><p>5$</p></div>
+     <div class="watermelon" onclick="toggle_watermelon()"> <img id="watermelon" src="watermelon.jpg"/><p>watermelon</p><p>10$</p></div>
+   </div>
+   <div class="body2">
+     <div class="kiwi" onclick="toggle_kiwi()"> <img id="kiwi" src="kiwi.jpg"/><p>kiwi</p><p>5$</p></div>
+     <div class="strawberry"onclick="toggle_strawberry()"> <img id="strawberry" src="strawberry.jpg"/><p>strawberry</p><p>15$</p></div>
+     <div class="cherry" onclick="toggle_cherry()"> <img id="cherry" src="cherry.jpg"/><p>cherry </p><p>5$</p></div>
+     <div class="tomato"onclick="toggle_tomato()"> <img id="tomato"src="tomato.jpg"/><p>tomato </p><p>25$</p></div>
+   </div>
+   <div class="body3">
+     <div class="lemon"onclick="toggle_lemon()"> <img id="lemon" src="lemon.jpg"/><p>lemon</p><p>5$</p></div>
+     <div class="melon"onclick="toggle_melon()"> <img id="melon" src="melon.jpg"/><p>melon </p><p>15$</p></div>
+     <div class="coconut"onclick="toggle_coconut()"> <img id="coconut" src="coconut.jpg"/><p>coconut </p><p>25$</p></div>
+     <div class="pineapple"onclick="toggle_pineapple()"> <img id="pineapple"src="pineapple.jpg"/><p>pineapple </p><p>20$</p></div>
+   </div>
+   <div class="body4">
+     <button id="buy" onclick="buy();">BUY</button>
+   </div>
+   <div class="menu">
+     <div style="cursor:pointer;" onclick="window.scrollTo(0,0);"> <p>TOP</p> </div>
+     <hr id="menu_hr">
+     <div style="cursor:pointer;" onclick="window.scrollTo(0,3000);"><p>BOTTOM</p> </div>
+   </div>
+
+
+</body>
+
+
+</html>

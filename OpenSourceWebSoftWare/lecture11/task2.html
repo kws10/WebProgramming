@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+  .image-frame{
+  	float: left;
+      position: relative;
+  	padding: 0;
+  }
+
+  .image-caption{
+  	display: none;
+  	width: 250px;
+  }
+</style>
+
+<head>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+
+<script>
+
+  $(document).ready(function()({
+      $(".image-frame").mouseenter(function(){
+        $(".img-caption").slideDown(function(){
+        });
+      });
+      $(".image-frame").mouseleave(function(){
+        $(".img-caption").slideUp(function(){
+        });
+    });
+
+</script>
+
+</head>
+
+<body>
+
+<div class="image-frame">
+  <img src = "img_avatar.png">
+  <div class = "img-caption">
+    <p> hello </p>
+  </div>
+
+</body>
+
+</html>

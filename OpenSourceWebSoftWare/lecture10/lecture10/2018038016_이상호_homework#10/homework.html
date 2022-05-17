@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1> Korea Probaseball fan scale map </h1>
+<div id="map" style="width:800px; height: 500px"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(36.3283, 127.4583);
+  var mapOptions = {
+  	center: myCenter,
+    zoom: 7
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+  var markers = [
+    new google.maps.LatLng(37.5666791, 126.9782914), //서울
+    new google.maps.LatLng(35.1799528, 129.0752365), //부산
+    new google.maps.LatLng(35.8713, 128.6018), //대구
+    new google.maps.LatLng(36.3496, 127.3848), //대전
+    new google.maps.LatLng(35.1594647, 126.8515034), //광주
+    new google.maps.LatLng(35.8, 129.5), //마산
+    new google.maps.LatLng(37.5666791, 126.5), //인천
+    new google.maps.LatLng(37.1, 127.7), //수원
+  ];
+
+  var population = [7.0, 6.0, 5.5, 4.0, 5.5, 3.0, 3.0, 2.5];
+
+  var marker, i, circles;
+
+  marker = new google.maps.Marker({
+		position: markers[0],
+	  map: map,
+    icon:'doosan.png'
+	  });
+    marker.setMap(map);
+
+  marker = new google.maps.Marker({
+  		position: new google.maps.LatLng(35, 129.0752365),
+  	  map: map,
+      icon:'lotte.png'
+  	  });
+      marker.setMap(map);
+
+  marker = new google.maps.Marker({
+      position: new google.maps.LatLng(35.6713, 128.6018), //삼성
+      map: map,
+      icon:'samsung.png'
+      });
+      marker.setMap(map);
+
+  marker = new google.maps.Marker({
+      position: new google.maps.LatLng(36.1496, 127.3848), //한화
+      map: map,
+      icon:'hanhwa.png'
+    });
+      marker.setMap(map);
+
+  marker = new google.maps.Marker({
+      position: new google.maps.LatLng(34.9, 126.8515034), //기아
+      map: map,
+      icon:'kia.png'
+      });
+      marker.setMap(map);
+
+  marker = new google.maps.Marker({
+        position: new google.maps.LatLng(37.1666791, 126.9782914), //lg
+        map: map,
+        icon:'lg.png'
+        });
+        marker.setMap(map);
+
+  marker = new google.maps.Marker({
+        position: new google.maps.LatLng(37.3666791,127.5), // 키움
+        map: map,
+        icon:'kiwoom.png'
+        });
+        marker.setMap(map);
+
+  marker = new google.maps.Marker({
+        position: new google.maps.LatLng(37.3, 126.5), //ssg
+        map: map,
+        icon:'ssg.png'
+        });
+        marker.setMap(map);
+
+  marker = new google.maps.Marker({
+        position: new google.maps.LatLng(36.9, 127.7), //kt
+        map: map,
+        icon:'kt.png'
+        });
+        marker.setMap(map);
+
+  marker = new google.maps.Marker({
+        position: new google.maps.LatLng(35.6, 129.5), //nc
+        map: map,
+        icon:'nc.png'
+        });
+        marker.setMap(map);
+
+
+
+
+
+  for(i = 0; i < markers.length; i++){
+    circles = new google.maps.Circle({
+		center: markers[i],
+		radius: population[i]*10000,
+		strokeColor: "#FF5733",
+		strokeOpacity: 0.5,
+		strokeWeight: 3,
+		fillColor: "#FF5733",
+		fillOpacity: 0.3
+	  });
+	  circles.setMap(map);
+
+	/* Option to output the population of each city in the InfoWindow
+	infowindow = new google.maps.InfoWindow({
+		content:
+		"<p> Population: " + population[i]*1000000 +  "</p>"
+	  });
+	  infowindow.open(map,marker);
+	  */
+	}
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOURKEY&callback=myMap"></script>
+
+</body>
+</html>

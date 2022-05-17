@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div id="map" style="width:800px; height: 500px"></div>
+
+<script>
+function myMap() {
+var mapCanvas = document.getElementById("map");
+var myCenter = new google.maps.LatLng(35.179554, 129.075638);
+var mapOptions = {
+ center: myCenter,
+ zoom: 5
+};
+var map = new google.maps.Map(mapCanvas, mapOptions);
+
+var marker = new google.maps.Marker({
+position: myCenter
+map: map
+});
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBO9x2OCvYGku0WPgtcNaW_wN7h6i-wig&callback=myMap"></script>
+
+</body>
+</html>

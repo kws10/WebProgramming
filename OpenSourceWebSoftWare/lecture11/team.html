@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+.image-frame{
+	float: left;
+    position: relative;
+	padding: 0;
+}
+
+.image-frame2{
+	float: left;
+    position: relative;
+	padding: 0;
+}
+
+.image-frame3{
+	float: left;
+    position: relative;
+	padding: 0;
+}
+
+.image-caption{
+	display: none;
+	width: 250px;
+	position: absolute;
+	bottom: 0px;
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+.image-caption2{
+	display: none;
+	width: 250px;
+	position: absolute;
+	bottom: 0px;
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+.image-caption3{
+	display: none;
+	width: 250px;
+	position: absolute;
+	bottom: 0px;
+	background-color: black;
+	color: white;
+	opacity: 0.8;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $(".image-frame").mouseenter(function(){
+    $(".image-caption").slideDown("slow");
+  });
+  $(".image-frame").mouseleave(function(){
+    $(".image-caption").slideUp("slow");
+  });
+
+  $(".image-frame2").mouseenter(function(){
+    $(".image-caption2").slideDown("slow");
+  });
+  $(".image-frame2").mouseleave(function(){
+    $(".image-caption2").slideUp("slow");
+  });
+
+  $(".image-frame3").mouseenter(function(){
+    $(".image-caption3").slideDown("slow");
+  });
+  $(".image-frame3").mouseleave(function(){
+    $(".image-caption3").slideUp("slow");
+  });
+});
+
+</script>
+
+</head>
+<body>
+<div class="image-frame">
+	<img src="img_avatar.png">
+	<div class="image-caption">
+		<p>My name is Aziz. I am a professor of software.
+		I teach Web and Database courses.</p>
+	</div>
+</div>
+
+
+<div class="image-frame2">
+	<img src="img_avatar.png">
+	<div class="image-caption2">
+		<p>My name is Aziz. I am a professor of software.
+		I teach Web and Database courses.</p>
+	</div>
+</div>
+
+<div class="image-frame3">
+	<img src="img_avatar.png">
+	<div class="image-caption3">
+		<p>My name is Aziz. I am a professor of software.
+		I teach Web and Database courses.</p>
+	</div>
+</div>
+
+</body>
+</html>

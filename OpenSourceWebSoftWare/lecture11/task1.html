@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("p:first").mouseenter(function(){
+      $("p:first").css({"background-color":"yellow"});
+    });
+    $("p:first").mouseleave(function(){
+      $("p:first").css({"background-color":"gray"});
+    });
+
+  });
+
+
+</script>
+</head>
+
+<body>
+
+<p>hello</p>
+<p>hello</p>
+<p>hello</p>
+
+</body>
+</html>
